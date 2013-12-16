@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+	<style>
+	  button{
+	    width: 60px;
+		height: 50px;
+		cursor: pointer;
+	  }
+	  canvas{
+	    position: absolute;
+	  }
+	</style>
+	
+  </head>
+  <body>
+    <div id='wrapper_button'>
+	  <button id='h_line' value="type1">Heavy Line</button>
+	  <button id='t_line' value="type2">Thin Line</button>
+	  <button id='d_line' value="type0">Default Line</button>
+	  <button id='i_line'>Info Lines</button>
+	  <button id='de_line'>Delete Line</button>
+	  <button id='m_line'>Move Line</button>
+	  <button id='dr_line'>Drawing Line</button>
+	  <button id='save_png'>Save PNG</button>
+	  <button id='save_svg'>Save SVG</button>
+	</div>
+	<div style='border: 0px solid #000; width: 500px; height: 500px;'>
+	  <canvas id='draw'></canvas>
+      <canvas id='building'></canvas>
+	  <canvas id='route'></canvas>
+	  <canvas id='text'></canvas>
+	  <canvas id='icons'></canvas>
+	  <canvas id='grid'></canvas>
+	</div>
+  </body>
+    <script src='/canvas/eventtest/EventSimple_lib.js'></script>
+	<script src='/canvas/eventtest/Canvas.js'></script>
+	<script src='/canvas/eventtest/UPD.js'></script>
+	<script src='/canvas/eventtest/Line.js'></script>
+	<script src='/canvas/eventtest/Mode.js'></script>
+    <script src='/canvas/eventtest/init.js'></script>
+</html>
+	
