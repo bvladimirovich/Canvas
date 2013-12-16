@@ -231,71 +231,7 @@ mode.move = function (Draw, Building) {
   };
   
   this.click = function(ev){
-    context.fillStyle  = '#fff';
-	context.lineWidth = 1;
-    var mouseX = ev.pageX - left;
-	var mouseY = ev.pageY - top;
-	for (var i in lineArr) {
-	  var line = lineArr[i];
-	  dx = r(line);
-	  var h = line.normal_eq(mouseX, mouseY);
-	  if(h <= dx){
-		if (line.y1 >= line.y2){
-		  if(mouseY > line.y1 || mouseY < line.y2) return;
-		  //fill(line, 1);
-		  for (var x=line.x1; x<=line.x2; x++){
-	      for (var y=line.y1; y>=line.y2; y--){
-	      if (line.normal_eq(x, y) > dx-1) continue;
-		  if (x%3 != 1) continue;
-		  if (y%3 != 1) continue;
-		  context.beginPath();
-		  context.arc(x, y, 1, 0, Math.PI*2, true);
-		  context.stroke();
-		  context.fill();
-		  }
-          }		  
-		  continue;
-		}
-		if (line.y1 < line.y2){
-		  if(mouseY < line.y1 || mouseY > line.y2) return;
-		  //fill(line, 2);
-		  for (var x=line.x1; x<=line.x2; x++){
-	      for (var y=line.y1; y<=line.y2; y++){
-	      if (line.normal_eq(x, y) > dx-1) continue;
-		  if (x%3 != 1) continue;
-		  if (y%3 != 1) continue;
-		  context.beginPath();
-		  context.arc(x, y, 1, 0, Math.PI*2, true);
-		  context.stroke();
-		  context.fill();
-		  }
-	      }
-		  continue;
-		}
-		if(line.x1 >= line.x2){
-	      if(mouseX > line.x1 || mouseX < line.x2) return;
-		  //fill(line, 3);
-		  
-		  for (var x=line.x1; x<=line.x2; x++){
-	      for (var y=line.y1; y<=line.y2; y++){
-	      if (line.normal_eq(x, y) > dx-1) continue;
-		  if (x%3 != 1) continue;
-		  if (y%3 != 1) continue;
-		  context.beginPath();
-		  context.arc(x, y, 1, 0, Math.PI*2, true);
-		  context.stroke();
-		  context.fill();
-		  }
-	      }
-		  return;
-		}
-		if(line.x1 < line.x2){
-		  if(mouseX < line.x1 || mouseX > line.x2) return;
-		  fill(line, 4);
-		  return;
-		}
-	  }
-	}
+
   };
 	
 	function fill(line, i){
