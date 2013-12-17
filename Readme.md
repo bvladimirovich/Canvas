@@ -1,4 +1,4 @@
-name project: Canvas
+name project: <span style='border-bottom:1px dotten #000'><b>Canvas</b></span><br>
 language: javascript and html
 
 Canvas.js - класс реализации канваса. <br>
