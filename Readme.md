@@ -1,4 +1,4 @@
-GitHub Canvas
+<h1>GitHub Canvas</h1>
 <hr>
 
 language: javascript and html <br>
