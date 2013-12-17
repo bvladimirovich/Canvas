@@ -22,7 +22,7 @@ var Canvas = (function(){
 		  elem.style[key] = style[key];
         }
 	  }
-	  //возвращает готовый канвас
+	  
 	  return elem;
 	}
   }
